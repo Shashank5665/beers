@@ -19,11 +19,18 @@ const Beerlist = () => {
           "https://api.sampleapis.com/beers/ale"
         );
 
-        const sortedBeers = response.data.sort((beer) => {
-          const beerPrice = beer.price.replace("$", "");
-          return beerPrice;
-        });
+        //replacing
+        const mappedBeer = response.data.map((beer) => ({
+          ...beer,
+          newEntity: beer.price.replace("$", ""),
+        }));
 
+        //then sorting
+        const sortedBeers = mappedBeer.sort(
+          (a, b) => a.newEntity - b.newEntity
+        );
+
+        //filtering
         const filteredBeers = sortedBeers.filter(
           (beer) => beer.rating.average > 4.5
         );
