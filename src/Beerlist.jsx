@@ -62,8 +62,7 @@ const Beerlist = () => {
                   Price: {beer?.price}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  Rating: {beer?.rating.average} ({beer?.rating.reviews}{" "}
-                  reviews)
+                  Rating: {beer?.rating.average}
                 </Typography>
               </CardContent>
             </Card>
