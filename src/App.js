@@ -1,10 +1,12 @@
 import "./App.css";
-import Beerlist from "./Beerlist";
+import Beerlist from "./MyComponent";
+import Paginate from "./Paginate";
 
 function App() {
   return (
     <div className="App">
-      <Beerlist />
+      {/* <Beerlist name="shashank" /> */}
+      <Paginate />
     </div>
   );
 }
